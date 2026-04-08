@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RaceBud.ai</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">RaceBud.ai V1</p>
+        <h1>AiM Telemetry Upload, Track Map, and Coaching</h1>
+        <p class="lede">
+          Upload AiM CSV files, build a clean track map, and get faster with lap-by-lap coaching.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Upload Session</h2>
+            <p class="muted">
+              Upload one or more AiM CSV files for one combined analysis.
+            </p>
+          </div>
+          <div class="status-pill" id="status-pill">Ready</div>
+        </div>
+
+        <form id="upload-form" class="upload-form">
+          <label class="field">
+            <span>Session Name</span>
+            <input id="sessionName" name="sessionName" type="text" value="Session 1" />
+          </label>
+
+          <label class="field">
+            <span>AiM CSV Files</span>
+            <input id="sessions" name="sessions" type="file" accept=".csv" multiple required />
+          </label>
+
+          <div class="help-box">
+            <h3>AiM Export</h3>
+            <p>
+              Export the full CSV with metadata, headers, units, and all telemetry rows.
+            </p>
+          </div>
+
+          <button type="submit" id="submit-button">Parse AiM Files</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Track Map</h2>
+            <p class="muted">
+              One clean loop with sectors and major turns.
+            </p>
+          </div>
+        </div>
+
+        <div id="track-map" class="map-shell empty">
+          Upload a session to build the map.
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Coaching</h2>
+            <p class="muted">
+              Class-aware dirt kart coaching for Mod Kart and Junior 2.
+            </p>
+          </div>
+        </div>
+
+        <div id="coaching" class="results empty">
+          Upload a session to see coaching.
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Session Results</h2>
+            <p class="muted">Upload summary, laps, and parser warnings.</p>
+          </div>
+        </div>
+
+        <div id="results" class="results empty">
+          Upload a file set to see session results.
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
