@@ -1,0 +1,17 @@
+{
+  "name": "racebud",
+  "version": "1.0.0",
+  "description": "RaceBud.ai AiM-first telemetry upload and analysis prototype",
+  "main": "server/app.js",
+  "scripts": {
+    "dev": "nodemon server/app.js",
+    "start": "node server/app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
